@@ -1,0 +1,165 @@
+/* Font - Overpass */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+html 
+{
+    font-family: 'Overpass', sans-serif;
+    font-size: 62.5%;
+}
+
+body 
+{
+    background-color: var(--BgColor);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Card Default style */
+#card 
+{
+    background-color: var(--CardBgColor);
+    position: relative;
+    max-width: 41rem;
+    margin: 2rem;
+    border-radius: 2.5rem;
+}
+
+#card .card-content { padding: 2rem; }
+
+#card .card-content .title
+{
+    font-size: var(--TitleSize);
+    color: var(--White);
+    letter-spacing: 0.1rem;
+}
+
+#card .card-content .text 
+{
+    font-size: var(--FontSize);
+    color: var(--Paragraph);
+    line-height: 2.2rem;
+}
+
+/* Rating State Style */
+#card #rating-state img 
+{
+    background-color: var(--RatingButton);
+    padding: 1.6rem;
+    border-radius: 50%;
+    margin-bottom: 3.5rem;
+}
+
+#card #rating-state .text { margin-top: 1.8rem; }
+
+#card #rating-state .ratings 
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 0;
+}
+
+#card #rating-state .ratings input { display: none; }
+
+#card #rating-state .ratings .rate 
+{
+    font-size: var(--FontSize);
+    height: var(--ButtonSizeMobile);
+    width: var(--ButtonSizeMobile);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--RatingButton);
+    color: var(--Paragraph);
+    font-weight: 700;
+}
+
+#card #rating-state .ratings .rate:hover 
+{
+    background-color: var(--PrimaryColor);
+    color: var(--CardBgColor);
+}
+
+#card #rating-state .ratings input:checked ~ .rate 
+{
+    background-color: #fff;
+    color: var(--CardBgColor);
+}
+
+#card #rating-state .submit-btn 
+{
+    border: none;
+    background-color: var(--PrimaryColor);
+    color: var(--CardBgColor);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    width: 100%;
+    height: 4rem;
+    border-radius: 2rem;
+}
+
+
+#card #rating-state .submit-btn:hover { background-color: #fff; }
+
+#card #rating-state .submit-btn:disabled 
+{
+    background-color: var(--PrimaryColor);
+    opacity: 0.8;
+}
+
+/* Thanks State Style */
+#card #thanks-state 
+{
+    text-align: center;
+    padding: 4.5rem 2.5rem;
+}
+#card #thanks-state #rating-score 
+{
+    font-size: var(--FontSize);
+    color: var(--PrimaryColor2);
+    background-color: var(--RatingButton);
+    width: fit-content;
+    height: 3.4rem;
+    padding: 1rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5rem;
+    margin: 2.5rem auto;
+}
+
+#card #thanks-state .title { margin: 4rem 0 1rem; }
+
+#card .card-content.hidden 
+{
+    position: absolute;
+    opacity: 0;
+}
+
+/* Footer */
+.attribution 
+{ 
+    font-size: 1.1rem; 
+    text-align: center; 
+    color: #fff;
+}
+.attribution a { color: hsl(228, 66%, 63%); }
+
+/* Responsivity config */
+@media screen and (min-width: 426px) 
+{
+    #card .card-content { padding: 3rem; }
+}
+
+@media screen and (min-width: 375px) 
+{
+    #card #rating-state .ratings .rate {
+        height: var(--ButtonSizeDesktop);
+        width: var(--ButtonSizeDesktop);
+    }
+}

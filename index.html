@@ -4,46 +4,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./src/assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Interactive rating component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="src/css/reset.css">
+  <link rel="stylesheet" href="src/css/variables.css">
+  <link rel="stylesheet" href="src/css/style.css">
+
 </head>
 <body>
-  
-  <!-- Rating state start -->
+  <main id="card">
+    <section class="card-content " id="rating-state">  <!-- Rating state start -->
+      <img src="src/assets/images/icon-star.svg" alt="Star icon">
 
-  How did we do?
+      <h1 class="title">How did we do?</h1>
+      <p class="text">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
 
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
+      <div class="ratings">
+        <label for="1">
+          <input type="checkbox" name="rate" id="1" value="1">
+          <p class="rate">1</p>
+        </label>
+        <label for="2">
+          <input type="checkbox" name="rate" id="2" value="2">
+          <p class="rate">2</p>
+        </label>
+        <label for="3">
+          <input type="checkbox" name="rate" id="3" value="3">
+          <p class="rate">3</p>
+        </label>
+        <label for="4">
+          <input type="checkbox" name="rate" id="4" value="4">
+          <p class="rate">4</p>
+        </label>
+        <label for="5">
+          <input type="checkbox" name="rate" id="5" value="5">
+          <p class="rate">5</p>
+        </label>
+      </div>
 
-  1 2 3 4 5
+      <button class="submit-btn">Submit</button>
+    </section>  <!-- Rating state end -->
 
-  Submit
+    <section class="card-content hidden" id="thanks-state">  <!-- Thank you state start -->
+      <img src="src/assets/images/illustration-thank-you.svg" alt="Thank-you illustration">
+      <p id="rating-score">You selected <!-- Add rating here --> out of 5</p>
 
-  <!-- Rating state end -->
+      <h2 class="title">Thank you!</h2>
 
-  <!-- Thank you state start -->
+      <p class="text">We appreciate you taking the time to give a rating. If you ever need moresupport, don’t hesitate to get in touch!</p>
+    </section>  <!-- Thank you state end -->
+  </main>
 
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <footer class="attribution">
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://www.linkedin.com/in/ramon-alvez/" target="_blank">Ramon Alvez</a>.</p>
+  </footer>
 </body>
 </html>

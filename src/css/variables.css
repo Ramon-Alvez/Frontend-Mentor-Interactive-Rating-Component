@@ -1,0 +1,26 @@
+:root {
+    /* ## Colors */
+
+    /* ### Primary */
+
+    --PrimaryColor: hsl(25, 97%, 53%);
+    --PrimaryColor2: hsl(28, 100%, 59%);
+
+    /* ### Neutral */
+
+    --White: hsl(0, 0%, 100%);
+    --Paragraph: hsl(217, 12%, 63%);
+    --RatingButton: hsl(213, 19%, 18%);
+    --CardBgColor: hsl(215,22%,15%); 
+    --BgColor: hsl(216, 12%, 8%);
+
+
+    /* ## Typography */
+
+    /* ### Body Copy */
+
+    --TitleSize: 2.6rem;
+    --FontSize: 1.5rem;
+    --ButtonSizeMobile: 4rem;
+    --ButtonSizeDesktop: 5rem;
+}
