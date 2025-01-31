@@ -15,7 +15,7 @@
 </head>
 <body>
   <main id="card">
-    <section class="card-content " id="rating-state">  <!-- Rating state start -->
+    <section class="card-content" id="rating-state">  <!-- Rating state start -->
       <img src="src/assets/images/icon-star.svg" alt="Star icon">
 
       <h1 class="title">How did we do?</h1>
@@ -23,28 +23,28 @@
 
       <div class="ratings">
         <label for="1">
-          <input type="checkbox" name="rate" id="1" value="1">
+          <input class="rating-checkbox" type="checkbox" name="rate" id="1" value="1">
           <p class="rate">1</p>
         </label>
         <label for="2">
-          <input type="checkbox" name="rate" id="2" value="2">
+          <input class="rating-checkbox" type="checkbox" name="rate" id="2" value="2">
           <p class="rate">2</p>
         </label>
         <label for="3">
-          <input type="checkbox" name="rate" id="3" value="3">
+          <input class="rating-checkbox" type="checkbox" name="rate" id="3" value="3">
           <p class="rate">3</p>
         </label>
         <label for="4">
-          <input type="checkbox" name="rate" id="4" value="4">
+          <input class="rating-checkbox" type="checkbox" name="rate" id="4" value="4">
           <p class="rate">4</p>
         </label>
         <label for="5">
-          <input type="checkbox" name="rate" id="5" value="5">
+          <input class="rating-checkbox" type="checkbox" name="rate" id="5" value="5">
           <p class="rate">5</p>
         </label>
       </div>
 
-      <button class="submit-btn">Submit</button>
+      <button id="submit-btn" disabled>Submit</button>
     </section>  <!-- Rating state end -->
 
     <section class="card-content hidden" id="thanks-state">  <!-- Thank you state start -->
@@ -60,5 +60,7 @@
   <footer class="attribution">
     <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://www.linkedin.com/in/ramon-alvez/" target="_blank">Ramon Alvez</a>.</p>
   </footer>
+
+  <script src="src/js/index.js"></script>
 </body>
 </html>

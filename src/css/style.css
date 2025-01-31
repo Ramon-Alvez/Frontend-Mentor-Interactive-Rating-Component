@@ -15,6 +15,7 @@ body
     height: 100vh;
     align-items: center;
     justify-content: center;
+    overflow-y: hidden;
 }
 
 /* Card Default style */
@@ -72,6 +73,7 @@ body
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 
     background-color: var(--RatingButton);
     color: var(--Paragraph);
@@ -82,6 +84,7 @@ body
 {
     background-color: var(--PrimaryColor);
     color: var(--CardBgColor);
+    transition: 0.2s ease-in;
 }
 
 #card #rating-state .ratings input:checked ~ .rate 
@@ -90,7 +93,7 @@ body
     color: var(--CardBgColor);
 }
 
-#card #rating-state .submit-btn 
+#card #rating-state #submit-btn 
 {
     border: none;
     background-color: var(--PrimaryColor);
@@ -101,15 +104,21 @@ body
     width: 100%;
     height: 4rem;
     border-radius: 2rem;
+    cursor: pointer;
 }
 
 
-#card #rating-state .submit-btn:hover { background-color: #fff; }
+#card #rating-state #submit-btn:hover 
+{ 
+    transition: 0.2s ease-in;
+    background-color: #fff; 
+}
 
-#card #rating-state .submit-btn:disabled 
+#card #rating-state #submit-btn:disabled 
 {
     background-color: var(--PrimaryColor);
     opacity: 0.8;
+    cursor: default;
 }
 
 /* Thanks State Style */
@@ -118,6 +127,7 @@ body
     text-align: center;
     padding: 4.5rem 2.5rem;
 }
+
 #card #thanks-state #rating-score 
 {
     font-size: var(--FontSize);
@@ -144,10 +154,12 @@ body
 /* Footer */
 .attribution 
 { 
+    margin-top: 2rem;
     font-size: 1.1rem; 
     text-align: center; 
     color: #fff;
 }
+
 .attribution a { color: hsl(228, 66%, 63%); }
 
 /* Responsivity config */
